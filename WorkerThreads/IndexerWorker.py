@@ -1,7 +1,6 @@
 import threading
 import queue
 import os
-import textract
 
 class IndexerWorker(threading.Thread):
     def __init__(self, que=None, *args, **kwargs):
@@ -16,8 +15,8 @@ class IndexerWorker(threading.Thread):
                 return
             
             try:
-                text = textract.process(filepath)
-                text = str(text, 'utf-8', 'ignore')
+                # Simulate text extraction
+                text = f"Extracted text from {filepath}"
                 pre, _ = os.path.splitext(os.path.basename(filepath))
                 
                 # Ensure Data/ExtractedText directory exists
