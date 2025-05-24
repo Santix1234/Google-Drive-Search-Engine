@@ -1,4 +1,5 @@
 pytest==8.3.5
+google-api-python-client  # This provides apiclient
 argcomplete==1.10.0
 astroid==2.4.0
 beautifulsoup4==4.8.0
